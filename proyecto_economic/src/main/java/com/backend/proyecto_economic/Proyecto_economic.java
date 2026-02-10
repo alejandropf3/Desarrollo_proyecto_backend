@@ -3,7 +3,9 @@
  */
 
 package com.backend.proyecto_economic;
+
 import com.backend.proyecto_economic.config.configDB;
+
 /**
  *
  * @author Propietario
@@ -11,7 +13,6 @@ import com.backend.proyecto_economic.config.configDB;
 public class Proyecto_economic {
 
     public static void main(String[] args) {
-        System.out.println("Hola mundo :)");
-        configDB.iniciarConexionDB();
+        configDB.iniciarConexionDB(); // Iniciar conexion con la base de datos
     }
 }
