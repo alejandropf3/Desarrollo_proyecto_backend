@@ -4,7 +4,9 @@
 
 package com.backend.proyecto_economic;
 
+//import java.sql.Connection;
 import com.backend.proyecto_economic.config.configDB;
+import com.backend.proyecto_economic.dao.inspeccionarDao;
 
 /**
  *
@@ -13,6 +15,8 @@ import com.backend.proyecto_economic.config.configDB;
 public class Proyecto_economic {
 
     public static void main(String[] args) {
-        configDB.iniciarConexionDB(); // Iniciar conexion con la base de datos
+        configDB.iniciarConexionDB();
+        inspeccionarDao inspector = new inspeccionarDao();
+        inspector.mostrarEstructura();
     }
 }
