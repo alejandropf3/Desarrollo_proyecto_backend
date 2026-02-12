@@ -18,14 +18,21 @@ public class configDB {
     private static String PASSWD = "#Aprendiz2024";
 
     public static Connection iniciarConexionDB() {
-
+        
         try {
+            //Registro explícito del Driver (Vital para Tomcat)
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
             Connection connection = DriverManager.getConnection(URL, USER, PASSWD);
             System.out.println("Conexion establecida con exito.");
             return connection;
 
         } catch (SQLException e) {
             e.printStackTrace();
+            return null;
+        }
+        catch (ClassNotFoundException e) {
+            System.err.println("ERROR: No se encontró el conector de MySQL. Verifica tu pom.xml.");
             return null;
         }
     }
