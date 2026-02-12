@@ -8,15 +8,16 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author Propietario
- */
 public class configDB {
     private static String URL = "jdbc:mysql://localhost:3306/economic";
     private static String USER = "root";
     private static String PASSWD = "#Aprendiz2024";
 
+    /**
+    * Clase de configuración para la gestión de la base de datos.
+    * Proporciona un punto único de acceso para establecer conexiones con el motor MySQL
+    * para el proyecto 'economic'.
+    */
     public static Connection iniciarConexionDB() {
         
         try {
